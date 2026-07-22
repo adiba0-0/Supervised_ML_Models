@@ -101,7 +101,7 @@ Breast-Cancer-Prediction (Logistic Regression)
 ├── model.pkl
 ├── breast-cancer.csv
 ├── breast-cancer-prediction.ipynb
-├── requirements
+├── requirements.txt
 ├── .gitignore
 └── README.md
 ```
