@@ -1,6 +1,17 @@
-# House Price Prediction
+# House Price Prediction using Linear Regression
 
-A Machine Learning web application that predicts house prices based on various property features using **Linear Regression**. The project includes data preprocessing, model training, evaluation, and a clean Streamlit interface for real-time predictions.
+A Machine Learning web application that predicts residential house prices based on property features using **Linear Regression**. This project demonstrates the complete end-to-end Machine Learning workflow—from data preprocessing and model training to evaluation and deployment through an interactive **Streamlit** application.
+
+---
+
+## Features
+
+- Real-time house price prediction
+- Interactive Streamlit web interface
+- Income vs House Price visualization
+- Linear Regression prediction model
+- Fast and lightweight deployment
+- Model performance evaluation
 
 ---
 
@@ -16,169 +27,79 @@ A Machine Learning web application that predicts house prices based on various p
 
 ---
 
-## Features
-
-- Predict house prices instantly
-- Interactive and responsive Streamlit interface
-- Machine Learning model trained using Linear Regression
-- Income vs House Price visualization
-- Download prediction report
-- Clean dashboard layout
-- Model performance information
-
----
-
 ## Dataset
 
-This project uses the **House Price Dataset** obtained from Kaggle.
+The project uses the **House Price Dataset** from Kaggle.
 
-The dataset contains information such as:
+### Input Features
 
 - Average Area Income
 - House Age
 - Number of Rooms
 - Number of Bedrooms
 - Area Population
+
+### Target Variable
+
 - House Price
 
-The Address column was removed during preprocessing since it was not useful for prediction.
+During preprocessing, the **Address** column was removed because it does not contribute to price prediction.
 
 ---
 
-## Model Performance
+## Machine Learning Model
 
-Algorithm:
+**Algorithm**
+
 - Linear Regression
 
-Evaluation Metrics:
+### Evaluation Metrics
 
 - R² Score: **0.9086**
 - Mean Absolute Error (MAE)
 - Mean Squared Error (MSE)
 
-The model achieved over **90% accuracy (R² score)** on the test dataset.
+The model explains approximately **90.86% of the variance** in house prices on the test dataset.
 
 ---
 
-# What Users Can Do
+## Project Workflow
+
+1. Dataset Collection
+2. Exploratory Data Analysis (EDA)
+3. Data Preprocessing
+4. Feature Selection
+5. Train-Test Split (80:20)
+6. Model Training using Linear Regression
+7. Model Evaluation
+8. Model Serialization using Pickle
+9. Streamlit Application Development
+
+---
+
+## Application
 
 Users can:
 
 - Enter property details
-- Predict the estimated market price of a house
-- View the relationship between income and house prices
-- Download a prediction report
-- Explore a clean dashboard interface
+- Predict estimated house prices
+- View Income vs House Price visualization
 
 ---
 
-# Project Workflow
+## Project Structure
 
-### 1. Dataset Collection
-
-Downloaded the House Price dataset from Kaggle.
-
----
-
-### 2. Data Exploration
-
-Explored the dataset using:
-
-- `df.head()`
-- `df.info()`
-- `df.describe()`
-- `df.shape`
-- `df.columns`
-- Missing value detection
-- Duplicate detection
-
----
-
-### 3. Data Preprocessing
-
-- Removed unnecessary columns
-- Selected relevant features
-- Split dataset into input (X) and output (y)
-
----
-
-### 4. Train-Test Split
-
-Used an **80-20 split** to train and evaluate the model.
-
----
-
-### 5. Model Training
-
-Trained a **Linear Regression** model using Scikit-learn.
-
----
-
-### 6. Model Evaluation
-
-Evaluated the model using:
-
-- Mean Absolute Error (MAE)
-- Mean Squared Error (MSE)
-- R² Score
-
----
-
-### 7. Model Serialization
-
-Saved the trained model as:
-
+```text
+House-Price-Prediction (Linear Regression LR)
+│
+├── app.py
+├── model.pkl
+├── House_price.csv
+├── House_Price_Prediction.ipynb
+├── requirements.txt
+├── .gitignore
+└── README.md
 ```
-model.pkl
-```
-
-using Python's Pickle library.
-
----
-
-### 8. Streamlit Web Application
-
-Developed a user-friendly interface where users can:
-
-- Enter property details
-- Predict prices
-- View visualizations
-- Download prediction reports
-
----
-
-## What I Learned
-
-This project helped me understand the complete Machine Learning workflow from raw data to deployment.
-
-Some of the concepts I learned include:
-
-- Reading datasets using Pandas
-- Exploring and understanding datasets
-- Data preprocessing
-- Feature selection
-- Train-test splitting
-- Linear Regression
-- Model evaluation
-- MAE, MSE and R² Score
-- Saving trained models using Pickle
-- Building interactive web apps using Streamlit
-- Deploying Machine Learning projects
-
----
-
-## Future Improvements
-
-Some possible improvements include:
-
-- Using Random Forest or XGBoost for comparison
-- Hyperparameter tuning
-- Better feature engineering
-- Improved dashboard design
-- Additional data visualizations
-- Prediction confidence intervals
-- User authentication
-- Dark mode support
 
 ---
 
@@ -187,13 +108,13 @@ Some possible improvements include:
 Clone the repository
 
 ```bash
-git clone https://github.com/adiba0-0/House_Price_Prediction_Model.git
+git clone https://github.com/adiba0-0/Supervised_ML_Models.git
 ```
 
-Move into the project folder
+Move into the project
 
 ```bash
-cd House-Price-Prediction
+cd "House-Price-Prediction (Linear Regression LR)"
 ```
 
 Create a virtual environment
@@ -204,7 +125,7 @@ python -m venv venv
 
 Activate the environment
 
-Windows
+### Windows
 
 ```bash
 venv\Scripts\activate
@@ -224,16 +145,26 @@ streamlit run app.py
 
 ---
 
-## Project Structure
+## Skills Demonstrated
 
-```
-House-Price-Prediction
-│
-├── app.py
-├── model.pkl
-├── House_price.csv
-├── House_Price_Prediction.ipynb
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
+- Data preprocessing
+- Exploratory Data Analysis
+- Feature Selection
+- Linear Regression
+- Model Evaluation
+- Model Serialization using Pickle
+- Streamlit Deployment
+- End-to-End Machine Learning Workflow
+
+---
+
+## Future Improvements
+
+- Hyperparameter tuning
+- Advanced feature engineering
+- Ensemble models (Random Forest, XGBoost)
+- Additional visualizations
+- Prediction confidence intervals
+- Download prediction reports
+- Improved UI/UX
+- Cloud deployment
